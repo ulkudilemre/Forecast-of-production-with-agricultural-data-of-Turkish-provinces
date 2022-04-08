@@ -1,0 +1,12 @@
+Ham verinin temizlenmesi:
+1. Her bir hücredeki "/r"ler silindi
+2. BİREYSEL ARAZİ ORTALAMASI'nda bulunan " Dekar" ifadesi silindi
+3. BİREYSEL ARAZİ ORTALAMASI'nda bulunan "%" ifadesi silindi
+4. TRAKTÖR SAYISI'ndaki " Adet" ifadesi silindi
+5. Bazı satırlarda bulunan boş veriler numpy kütüphanesindeki nan verisi ile değiştirildi.
+6. Satır adlarındaki boşluklar daha rahat bir kullanım sağlaması için "_" ile değiştirldi.
+7. Tüm veri setindeki nan verisi içeren satırlar incelendi. Toplam 4 satır nan verisi içermekteydi ve bunlardan bir tanesi boş bir satırdı. Diğer satırlardaki nan verileri fazlasıyla kategorik veriler olduğu için bu satırların veri setinden kaldırılmasına karar verildi. Kaldırılan satırlar dropped_rows.csv dosyasındadır.
+8. Orjinal veri setindeki toplam 12 sütun tek bir hücrede birden çok kategorik veri  içermektedir. Bu kategorik verilere "SÜTUN_ADI_KATEGORİK_VERİ" formatında encoding işlemi yapılmıştır. Veri tipi olarak integer veri tercih edilmiş olup, kategorik veri bulunuyorsa 1, bulunmuyorsa 0 değerini almıştır. 
+9. Sayısal veriler içeren sütunlar min-max normalizasyon yöntemi ile normalize edilmiştir.
+
+
